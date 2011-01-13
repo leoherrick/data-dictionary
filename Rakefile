@@ -17,4 +17,9 @@ namespace :db do
     ActiveRecord::Migration.verbose = true
     ActiveRecord::Migrator.migrate("db/migrate")
   end
+  desc "Seed the database"
+  task(:seed => :enviornment) do
+    seed_file = File.join(File.dirname(__FILE__), 'db', 'seeds.rb')
+    require seed_file
+  end
 end

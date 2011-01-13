@@ -5,7 +5,7 @@ class CreateDataElements < ActiveRecord::Migration
       t.string :human_name
       t.string :column_name
       t.string :description
-      t.string :type
+      t.string :data_type
       t.integer :length
       t.string :table
     end
